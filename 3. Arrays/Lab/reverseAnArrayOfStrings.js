@@ -1,28 +1,12 @@
-function reverseAnArrayOfStrings(arrInput) {
-    let newArr = arrInput;
-
-    for(let i = 0; i < (arrInput.length - 1) / 2; i++){
-
-        swap(i, newArr.length - 1 - i);
+function  reverseAnArrayOfStrings(inputArr) {
+    for(let i = 0; i < inputArr.length / 2; i++){
+        let secondI = inputArr.length - 1 - i;
+        let tempValue = inputArr[i];
+        inputArr[i] = inputArr[secondI];
+        inputArr[secondI] = tempValue;
     }
 
-    function swap(i, j) {
-  
-        let firstValue = (newArr.slice(i, i + 1)).toString();
-        let secondValue = (newArr.slice(j, j + 1)).toString();
-    
-        newArr.splice(i, 1, secondValue);
-        newArr.splice(j, 1, firstValue);
-    
-    }
-    
- 
-    console.log(newArr.join(' '));
+    console.log(inputArr.join(' '));
 }
 
-
-
-
-
 reverseAnArrayOfStrings(['a', 'b', 'c', 'd', 'e']);
-reverseAnArrayOfStrings(['abc', 'def', 'hig', 'klm', 'nop']);
