@@ -1,7 +1,7 @@
 function palindromeIntegers(inputArr) {
 
     for(let i = 0; i < inputArr.length; i++) {
-        let isPalindrome = true;
+        let isPalindrome = false;
         let numString = inputArr[i].toString();
         let reversed = '';
 
@@ -9,10 +9,8 @@ function palindromeIntegers(inputArr) {
             reversed += numString[i];
         }
 
-        for(let i = 0; i < numString.length; i++) {
-            if(numString[i] !== reversed[i]) {
-                isPalindrome = false;
-            }
+        if(numString === reversed) {
+            isPalindrome = true;
         }
 
         console.log(isPalindrome);
