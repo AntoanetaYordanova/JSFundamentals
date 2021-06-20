@@ -76,7 +76,7 @@ function arrayManipulator(inputArr, tasksArrInput) {
     function sumPairs(arr) {
         let tempArr = [];
         
-        for(let i = 0; i < arr.length; i + 2) {
+        for(let i = 0; i < arr.length; i += 2) {
             if(i === arr.length - 1) {
                 tempArr.push(arr[i]);
             } else {
@@ -85,9 +85,10 @@ function arrayManipulator(inputArr, tasksArrInput) {
             }
         }
 
-        arr = tempArr;
+        printArr = tempArr;
     }
 }   
 
-arrayManipulator([1, 2, 4, 5, 6, 7], ['add 1 8', 'contains 1', 'contains 3', 'print']);
+// arrayManipulator([1, 2, 4, 5, 6, 7], ['add 1 8', 'contains 1', 'contains 3', 'sumPairs','print']);
 // arrayManipulator([1, 2, 3, 4, 5], ['addMany 5 9 8 7 6 5', 'contains 15', 'remove 3', 'shift 1', 'print'] );
+arrayManipulator([2, 2, 4, 2, 4], ["add 1 4", "sumPairs", "print"])
