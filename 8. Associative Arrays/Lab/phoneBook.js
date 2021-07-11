@@ -1,13 +1,13 @@
-function phoneBook(inputArr) {
+function phoneBook(input) {
     let phoneBookObj = {};
 
-    for(let str of inputArr) {
-        let [name, number] = str.split(' ');
+    for(let person of input) {
+        let [name, number] = person.split(' ');
         phoneBookObj[name] = number;
     }
 
-    for(let key in phoneBookObj) {
-        console.log(`${key} -> ${phoneBookObj[key]}`);
+    for(let name in phoneBookObj) {
+        console.log(`${name} -> ${phoneBookObj[name]}`);
     }
 }
 
