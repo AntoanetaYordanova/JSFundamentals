@@ -1,7 +1,32 @@
 function piccolo(input) {
     let carsIn = new Map();
 
-    
+    for(let command of input) {
+        let [action, plate] = command.split(', ');
+        action = action.toUpperCase();
+        
+        if(action === 'IN') {
+            if(!carsIn.has(plate)) {
+                carsIn.set(plate, '');
+            }
+
+        } else if (action === 'OUT'){
+            if(carsIn.has(plate)) {
+                carsIn.delete(plate);
+            }
+
+        }
+    }
+
+    if(carsIn.size === 0) {
+        console.log('Parking Lot is Empty');
+    } else if (carsIn.size > 0) {
+        let sorted = Array.from(carsIn.entries()); 
+        sorted = sorted.sort((a,b) => a[0].localeCompare(b[0])); 
+        
+        
+    }
+
 }
 
 piccolo(['IN, CA2844AA',
