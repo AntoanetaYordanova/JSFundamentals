@@ -21,10 +21,9 @@ function piccolo(input) {
     if(carsIn.size === 0) {
         console.log('Parking Lot is Empty');
     } else if (carsIn.size > 0) {
-        let sorted = Array.from(carsIn.entries()); 
-        sorted = sorted.sort((a,b) => a[0].localeCompare(b[0])); 
-        
-        
+        let sorted = Array.from(carsIn.keys()); 
+        sorted = sorted.sort((a,b) => a.localeCompare(b)); 
+        console.log(sorted.join('\n'))
     }
 
 }
