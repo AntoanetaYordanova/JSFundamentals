@@ -17,8 +17,9 @@ function passwordReset(inputArr) {
     } else if (command[0] === 'Cut') {
         let index = Number(command[1]);
         let length = Number(command[2]);
-        let substring = newPass.substring(index, index + length);
-        newPass = newPass.replace(substring, '');
+        let passArr = newPass.split('');
+        passArr.splice(index, length);
+        newPass = passArr.join('')
         console.log(newPass);
     } else if (command[0] === 'Substitute') {
         let oldSubstr = command[1];
@@ -41,10 +42,10 @@ function passwordReset(inputArr) {
 }
 
 passwordReset([
-  "Siiceercaroetavm!:?:ahsott.:i:nstupmomceqr ",
+  "up8rgoyg3r1atmlmpiunagt!-irs7!1fgulnnnqy",
   "TakeOdd",
-  "Cut 15 3",
-  "Substitute :: -",
-  "Substitute | ^",
-  "Done",
-]);
+  "Cut 18 2",
+  "Substitute ! ***",
+  "Substitute ? .!.",
+  "Done"
+])
