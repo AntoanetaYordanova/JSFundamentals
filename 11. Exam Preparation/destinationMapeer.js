@@ -1,5 +1,5 @@
 function destinationMapper(input) {
-    let pattern = /([=\/])(?<destination>[A-Z][a-z]{2,})(\1)/g;
+    let pattern = /([=\/])(?<destination>[A-Z][a-zA-Z]{2,})(\1)/g;
     let destinantions = [];
     let match = pattern.exec(input);
     let points = 0;
@@ -14,4 +14,4 @@ function destinationMapper(input) {
    console.log(`Travel Points: ${points}`);
 }
 
-destinationMapper('=Hawai=/Cyprus/=Invalid/invalid==i5valid=/I5valid/=i=');
+destinationMapper('=HAwai=/Cyprus/=Invalid/invalid==i5valid=/I5valid/=i=');
